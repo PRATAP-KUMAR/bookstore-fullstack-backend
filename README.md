@@ -2,7 +2,7 @@
 
 For this backend to work follow below commands
 ```bash
-git clone https://github.com/PRATAP-KUMAR/mern-be-practice.git
+git clone https://github.com/PRATAP-KUMAR/bookstore-mern-be
 cd mern-be-practice
 npm install
 npm run dev
