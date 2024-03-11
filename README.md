@@ -1,6 +1,6 @@
 # Book Store
 
-For this backend to work follow below commands
+For this backend to work, follow below commands
 ```bash
 git clone https://github.com/PRATAP-KUMAR/bookstore-mern-be
 cd bookstore-mern-be
