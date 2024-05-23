@@ -4,8 +4,8 @@ Link to [Frontend Repo](https://github.com/PRATAP-KUMAR/bookstore-fullstack-fron
 
 For this backend to work, follow the below commands
 ```bash
-git clone https://github.com/PRATAP-KUMAR/bookstore-mern-be
-cd bookstore-mern-be
+git clone https://github.com/PRATAP-KUMAR/bookstore-fullstack-backend
+cd bookstore-fullstack-backend
 npm install
 npm run dev
 ```
