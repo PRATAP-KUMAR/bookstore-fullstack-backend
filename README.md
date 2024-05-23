@@ -1,9 +1,9 @@
 # Book Store
 
-For this backend to work follow below commands
+For this backend to work, follow below commands
 ```bash
-git clone https://github.com/PRATAP-KUMAR/mern-be-practice.git
-cd mern-be-practice
+git clone https://github.com/PRATAP-KUMAR/bookstore-mern-be
+cd bookstore-mern-be
 npm install
 npm run dev
 ```
