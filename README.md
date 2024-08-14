@@ -1,8 +1,6 @@
-# Bookstore - Fullstack App
+# Bookstore - Fullstack App - Backend
 
 Link to [Frontend Repo](https://github.com/PRATAP-KUMAR/bookstore-fullstack-frontend)
-
-
 
 ## Steps
 
@@ -12,7 +10,7 @@ cd bookstore-fullstack-backend
 npm install
 ```
 
-## Prerequisite packages
+### Prerequisite packages
 1. you must have PostgreSQL installed in your local machine.
 2. you must create a new database with your choice of name for the database with `psql` command line.
 3. you must edit the `db.js` file with details of your postgres config for username, password, database etc.
@@ -34,7 +32,9 @@ npm run dev
 ```
 
 The backend is connected if you see the below message on the console/terminal.
+```bash
 connected to db, listening on port 3000
+```
 
 ![All Books](https://github.com/PRATAP-KUMAR/bookstore-fullstack-backend/assets/40719899/8f29f3e2-489a-4082-b9a4-189edbb9e0dc)
 
