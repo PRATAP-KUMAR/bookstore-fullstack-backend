@@ -12,15 +12,14 @@ const createBook = async (request, response) => {
             });
         }
 
-        const text = 'insert into books values(default, $1, $2, $3)';
-        const values = [title, author, year];
+        const now = new Date();
+        const text = 'insert into books values(default, $1, $2, $3, $4, $5)';
+        const values = [title, author, year, now, now];
 
         const res = await pool.query(text, values);
-        console.log(res.rows);
 
         return response.status(201).send({ message: 'new book created' });
     } catch (error) {
-        console.log(error.message);
         response.status(500).send({
             message: error.message
         })
@@ -34,7 +33,6 @@ const getBooks = async (request, response) => {
         const books = res.rows;
         return response.status(200).json(books);
     } catch (error) {
-        console.log(error.message);
         response.status(500).send({ message: error.message });
     }
 }
@@ -52,7 +50,6 @@ const getBook = async (request, response) => {
         const book = res.rows[0];
         return response.status(200).json(book);
     } catch (error) {
-        console.log(error.message);
         response.status(500).send({
             message: error.message
         })
@@ -62,7 +59,6 @@ const getBook = async (request, response) => {
 // update book
 const updateBook = async (request, response) => {
     const { title, author, year } = request.body;
-    console.log(request.body);
 
     try {
         if (!title || !author || !year) {
@@ -73,14 +69,14 @@ const updateBook = async (request, response) => {
 
         const { id } = request.params;
 
+        const now = new Date();
         let query = {
             name: 'update book',
-            text: 'update books set title = $1, author = $2, year = $3 where id = $4',
-            values: [title, author, year, id]
+            text: 'update books set title = $2, author = $3, year = $4, updated_at = $5 where id = $1',
+            values: [id, title, author, year, now]
         }
 
         const res = await pool.query(query);
-        console.log(res);
 
         if (!res) {
             return response.status(404).json({
@@ -114,7 +110,6 @@ const deleteBook = async (request, response) => {
             message: 'Book deleted successfully'
         });
     } catch (error) {
-        console.log(error.message);
         response.status(500).send({ message: error.message });
     }
 }
