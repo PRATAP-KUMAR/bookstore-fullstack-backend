@@ -18,7 +18,6 @@ npm install
     ```js
     const pool = new Pool({
     user: 'admin', // replace with yours
-    password: 'admin', // replace with yours
     host: 'localhost', // since we choose local machine as the database, its always localhost.
     port: 5432, // by default this is the value for port
     database: 'bookstore', // replace with yours as mentioned in the step 2 above.
